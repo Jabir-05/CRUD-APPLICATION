@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>CRUD Application</title>
+  
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center fw-bold text-danger p-4">CRUD Application</h1>
+        <div class="row">
+            <div class="col-md-12 bg-white shadow-lg p-4">
+    
+               <div class="d-flex bg-primary text-white p-3 justify-content-between align-items-center rounded w-100"> 
+                    <div>
+                        <h1 class="text-white fw-bold">Student Details</h1>
+                    </div>
+                    <div>
+                        <button class="btn p-0 m-0 btn-light">
+                            <input type="search" placeholder="search" class=" search form-control">
+                        </button>
+                        <button class="btn delete-all-btn btn-danger fw-bold">
+                            <i class="fa fa-minus"></i> Delete All
+                        </button>
+                        <button class="btn btn-success add-btn fw-bold" data-bs-toggle="modal" data-bs-target="#myModel">
+                            <i class="fa fa-plus"></i> Add New Student
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="row mt-4">
+                    <div class="col-md-12 table-responsive">
+                        <table class="table mb-3 text-center">
+                            <thead>
+                                <tr>
+                                    <th class="fw-bold">Sr</th>
+                                    <th class="fw-bold">Photo</th>
+                                    <th class="fw-bold">Name</th>
+                                    <th class="fw-bold">Enrollment</th>
+                                    <th class="fw-bold">Course</th>
+                                    <th class="fw-bold">Email</th>
+                                    <th class="fw-bold">DOB</th>
+                                    <th class="fw-bold">Mobile No.</th>
+                                    <th class="fw-bold">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="reg-list">
+                               
+                            </tbody>
+                        </table>
+                        
+    </div>
+  </div>
+                        
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+
+        <div class="modal animate__animated animate__zoomIn" id="myModel">
+            <div class="modal-dialog  modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h4 class="fw-bold text-white ">Add New Student</h4>
+                        <button class="btn-close bg-white" data-bs-dismiss ="modal"></button>
+                    
+                    </div>
+
+                    <div class="modal-body">
+                        <form class="register-form">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Name</span>
+                                <input type="text" required class="form-control">
+
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Enrollment</span>
+                                <input type="text" required class="form-control">
+
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Course</span>
+                                <input type="text" required class="form-control">
+
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Email</span>
+                                <input type="email" required class="form-control">
+
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Mobile No.</span>
+                                <input type="number" required class="form-control">
+
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">DOB</span>
+                                <input type="date" required class="form-control">
+
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"></span>
+                                <input type="file" class="form-control">
+
+                            </div>
+
+                            <div class="input-group w-100 d-flex justify-content-end align-items-center mb-3">
+                                <button disabled class="btn fw-bold btn-danger mx-2" type="button">Update</button>
+                                <button class="btn fw-bold btn-primary" type="submit">Submit</button>
+                                
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
